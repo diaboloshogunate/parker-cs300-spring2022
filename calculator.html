@@ -24,26 +24,34 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script>
       const valid_operations = ['-', '+', '*', '/'];
+      const message_first_number = "Please enter first number";
+      const message_second_number = "Please enter second number";
+      const message_operation = "Please enter operation";
+      const message_invalid_number = 'Invalid number entered. Please try again';
+      const message_invalid_operation = 'Invalid operation. Please try again';
+      const message_unknown_operation_selected = 'Error Unknown operation';
+      const message_answer = "the answer is ";
       let first_number, operation, second_number, result = 0;
-      first_number = Number(prompt("Please enter first number"))
+
+      first_number = Number(prompt(message_first_number))
       while(isNaN(first_number))
       {
-        alert('Invalid number entered. Please try again')
-        first_number = Number(prompt("Please enter first number"))
+        alert(message_invalid_number)
+        first_number = Number(prompt(message_first_number))
       }
 
-      operation = prompt("Please enter operation")
+      operation = prompt(message_operation)
       while(!valid_operations.includes(operation))
       {
-        alert('Invalid operation. Please try again')
-        operation = Number(prompt("Please enter operation"))
+        alert(message_invalid_operation)
+        operation = Number(prompt(message_operation))
       }
 
-      second_number = Number(prompt("Please enter second number"))
+      second_number = Number(prompt(message_second_number))
       while(isNaN(second_number))
       {
-        alert('Invalid number entered. Please try again')
-        second_number = Number(prompt("Please enter second number"))
+        alert(message_invalid_number)
+        second_number = Number(prompt(message_second_number))
       }
 
       switch (operation)
@@ -61,11 +69,10 @@
           result = first_number / second_number
           break
         default:
-          result = 'Error Unknown operation'
+          result = message_unknown_operation_selected
           break
       }
-
-      alert("the answer is " + result)
+      alert(message_answer + result)
     </script>
   </body>
 </html>
