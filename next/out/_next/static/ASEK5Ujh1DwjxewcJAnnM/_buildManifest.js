@@ -1,0 +1,1 @@
+self.__BUILD_MANIFEST={__rewrites:{beforeFiles:[],afterFiles:[],fallback:[]},"/_error":["static/chunks/pages/_error-1995526792b513b2.js"],"/ex2-parker":["static/chunks/pages/ex2-parker-0f038a674c950aad.js"],sortedPages:["/_app","/_error","/ex2-parker"]},self.__BUILD_MANIFEST_CB&&self.__BUILD_MANIFEST_CB();
